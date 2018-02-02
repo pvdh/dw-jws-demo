@@ -1,0 +1,16 @@
+publicResponse: public
+protectedResponse: protected
+corsOrigins: "*"
+jwsCertUrl: https://oidc-kc.scc.kit.edu/auth/realms/kit/protocol/openid-connect/certs
+jwsExpectedIssuer: https://oidc-kc.scc.kit.edu/auth/realms/kit
+jwsExpectedAudience: pvdh-angular
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: /tmp/myapplication.log
+      threshold: ALL
+      archive: true
+      archivedLogFilenamePattern: /tmp/myapplication-%d.log
+      archivedFileCount: 5
+      timeZone: UTC
